@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
+          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    "android": {
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_MEDIA_LOCATION",
+        "android.permission.MANAGE_DOCUMENTS"
+      ],
+      "package": "my_snapchat",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/app_icon/snapchat_icon_512_512.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "ios": {
+      "infoPlist": {
+        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos.",
+        "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos."
+      }
+    },
+    "androidNavigationBar": {
+      "visible": "sticky-immersive"
+    },
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "my_snapchat",
+    "slug": "my_snapchat",
+    "extra": {
+      "eas": {
+        "projectId": "18867013-a666-4739-af1b-5e90b993381e"
+      }
+    }
+  }
+}
